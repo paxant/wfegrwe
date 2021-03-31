@@ -1,4 +1,5 @@
-﻿#include<iostream>  
+/*Самые лучшие решения не всегда самые гениальные, если расшифровать:"У меня шиза, нахрен"*/
+#include<iostream>  
 #include <cmath>
 #define _USE_MATH_DEFINES 
 #include <ATLComTime.h>
