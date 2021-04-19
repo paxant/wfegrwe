@@ -1,25 +1,28 @@
-#include <iostream>
-#include <fstream>
-using namespace std;
-
-int main()
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std; 
+int main(void)
 {
-    ifstream input("C:/Program/prob/Ñðåäíÿÿ_ïîãîäà_Â_Äóðêå.txt");
-    float ch;
-    int Count = 0;
-    while (input >> ch)
-        Count++;
-    cout << "×èñåë â ôàéëå : " << Count << endl;
-    input.close();
-
-    float* mass = new float[Count];
-    ifstream file("C:/Program/prob/Ñðåäíÿÿ_ïîãîäà_Â_Äóðêå.txt");
-    for (int i = 0; i < Count; i++) {
-        file >> mass[i];
-        cout << mass[i] << endl;
-    }
-
-    delete[]  mass;
-    system("pause");
-    return 0;
-}
+	setlocale(LC_ALL, "ru");
+	int i=0;
+		system("md C:\\Program\\prob");
+		ifstream appf("C:/Program/prob/Ð¡Ñ€ÐµÐ´Ð½ÑÑ_Ð¿Ð¾Ð³Ð¾Ð´Ð°_Ð’_Ð”ÑƒÑ€ÐºÐµ.txt");
+		double mass[9], summ = 0;
+		for (int i = 0; i < 9; i++)
+		{
+			appf >> mass[i];
+			summ += mass[i];
+		}
+		if (!appf.eof())
+		{
+			runtime_error("hui");
+		}
+		appf.close();
+		summ = summ / 9;
+		int y = 0;
+		for (int i = 0; i < 9; i++)
+			if (mass[i] < summ)
+				y++;
+		cout << y;	
+}	
